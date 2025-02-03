@@ -8,11 +8,36 @@
   <body>
     <header>
       <nav>
-        <button>Home</button>
-        <button>Menu</button>
-        <button>Contact</button>
+        <div class="nav-branding">Sophisticates</div>
+        <div class="nav-menu">
+          <button class="nav-item">Home</button>
+          <button class="nav-item">Menu</button>
+          <button class="nav-item">Contact</button>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </nav>
     </header>
-    <div id="content"></div>
+    <div id="content">
+      <div class="carousel">
+        <button class="carousel-button prev">&#8656;</button>
+        <button class="carousel-button next">&#8658;</button>
+        <ul class="slides">
+          <li class="slide active">
+            <img src="./images/high-end-cafe.jpg" alt="High end cafe" />
+          </li>
+          <li class="slide">
+            <img src="./images/pasta-dish.jpg" alt="Pasta dish" />
+          </li>
+          <li class="slide">
+            <img src="./images/steak-sliced.jpg" alt="Steak sliced" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer>Call at 555 - 555 - 5555</footer>
   </body>
 </html>
