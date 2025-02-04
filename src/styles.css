@@ -197,6 +197,10 @@ nav {
   top: 350px;
 }
 
+.slide-three > .slide-info > .slide-three-text-two {
+  font-size: 25px;
+}
+
 .slide.active {
   opacity: 1;
 }
