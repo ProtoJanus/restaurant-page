@@ -1,8 +1,3 @@
-/* <footer>
-Call at
-<div class="footer-number">555 - 555 - 5555</div>
-</footer> */
-
 class Footer {
   init() {
     const footer = document.createElement("footer");
