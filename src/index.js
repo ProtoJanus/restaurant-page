@@ -1,31 +1,14 @@
 import "./styles.css";
+import "./navbar.js";
+import Navbar from "./navbar.js";
+import Home from "./home.js";
+import Footer from "./footer.js";
 
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const navBar = new Navbar();
+navBar.init();
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
+const home = new Home();
+home.init();
 
-document.querySelectorAll(".nav-item").forEach((n) =>
-  n.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-  })
-);
-
-const carouselButton = document.querySelectorAll(".carousel-button");
-carouselButton.forEach((button) => {
-  button.addEventListener("click", () => {
-    const slides = document.querySelectorAll(".slide");
-    let activeIndex = Array.from(slides).findIndex((item) =>
-      item.classList.contains("active")
-    );
-
-    slides[activeIndex].classList.remove("active");
-    let nextIndex = (activeIndex + 1) % slides.length;
-
-    slides[nextIndex].classList.add("active");
-  });
-});
+const footer = new Footer();
+footer.init();
