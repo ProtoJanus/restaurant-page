@@ -25,9 +25,10 @@
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  min-height: 100dvh;
   min-height: -webkit-fill-available;
 }
-
 header {
   height: 70px;
   flex-shrink: 0;
