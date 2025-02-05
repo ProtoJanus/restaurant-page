@@ -125,9 +125,9 @@ nav {
 #content {
   flex-grow: 1;
 
-  /* this is for the fixed header and footers */
+  /* this is for the fixed header and footers
   margin-top: 70px;
-  margin-bottom: 50px;
+  margin-bottom: 50px; */
 }
 
 .carousel {
