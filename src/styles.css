@@ -22,12 +22,21 @@
   font-size: 20px;
 }
 
+:root {
+  --full-height: 100vh;
+}
+
+@supports (-webkit-touch-callout: none) {
+  :root {
+    --full-height: -webkit-fill-available;
+  }
+}
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-  min-height: 100dvh;
-  min-height: -webkit-fill-available;
+  min-height: var(--full-height);
+  height: 100%;
 }
 header {
   height: 70px;
