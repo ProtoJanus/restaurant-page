@@ -29,9 +29,14 @@ body {
 }
 
 header {
+  height: 70px;
   flex-shrink: 0;
+  z-index: 1;
   background-color: #262626;
   color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
   button {
     color: white;
     border: none;
@@ -119,6 +124,10 @@ nav {
 
 #content {
   flex-grow: 1;
+
+  /* this is for the fixed header and footers */
+  margin-top: 70px;
+  margin-bottom: 50px;
 }
 
 .carousel {
@@ -247,6 +256,9 @@ footer {
   gap: 10px;
   font-size: 20px;
   font-weight: 700;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-number {

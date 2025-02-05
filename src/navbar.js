@@ -46,7 +46,8 @@ class Navbar {
         navMenu.classList.toggle("active");
 
         let className = navMenuButton.textContent.toLowerCase();
-        classMap[className].init();
+        let thisClass = new classMap[className]();
+        thisClass.init();
       });
 
       navMenu.appendChild(navMenuButton);
