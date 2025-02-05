@@ -1,6 +1,7 @@
 import highEndCafe from "./images/high-end-cafe.jpg";
 import pastaDish from "./images/pasta-dish.jpg";
 import steakSliced from "./images/steak-sliced.jpg";
+import Menu from "./menu.js";
 
 class Home {
   init() {
@@ -36,6 +37,11 @@ class Home {
     slideOneTextTwo.textContent = "Daily";
     const slideOneButton = document.createElement("button");
     slideOneButton.textContent = "View Menu";
+
+    slideOneButton.addEventListener("click", () => {
+      const menu = new Menu();
+      menu.init();
+    });
 
     const slideOneImage = document.createElement("img");
     slideOneImage.src = highEndCafe;
