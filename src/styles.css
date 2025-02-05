@@ -224,7 +224,7 @@ nav {
   background-color: none;
   border: none;
   font-size: 4rem;
-  top: 50%;
+  bottom: 10px;
   z-index: 2;
   transform: translateY(-50%);
   color: rgba(255, 255, 255, 0.5);
@@ -241,12 +241,12 @@ nav {
 
 .carousel-button.prev {
   left: 1rem;
-  top: 90%;
+  height: 100px;
 }
 
 .carousel-button.next {
   right: 1rem;
-  top: 90%;
+  height: 100px;
 }
 
 footer {
