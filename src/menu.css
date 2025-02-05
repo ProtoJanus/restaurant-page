@@ -5,8 +5,8 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-bottom: 70px;
-  margin-top: 20px;
+  padding-bottom: 100px;
+  padding-top: 100px;
   .menu-card {
     width: 80%;
     max-width: 400px;
@@ -40,6 +40,5 @@
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     gap: 10px;
-    padding-bottom: 100px;
   }
 }
