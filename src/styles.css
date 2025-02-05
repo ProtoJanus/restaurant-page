@@ -190,6 +190,10 @@ nav {
     font-size: 20px;
     box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.85);
   }
+
+  button:hover {
+    background-color: #3d3d3d;
+  }
 }
 
 .slide-two > .slide-info {

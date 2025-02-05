@@ -1,21 +1,28 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production", // Change to "development" if needed
   entry: "./src/index.js",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-  devtool: "eval-source-map",
-  devServer: {
-    watchFiles: ["./src/template.html"],
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
+    }),
+    new ImageMinimizerPlugin({
+      minimizer: {
+        implementation: ImageMinimizerPlugin.imageminGenerate,
+        options: {
+          plugins: [
+            ["imagemin-webp", { quality: 75 }], // Convert to WebP
+          ],
+        },
+      },
     }),
   ],
   module: {
@@ -29,7 +36,7 @@ module.exports = {
         loader: "html-loader",
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpe?g|gif)$/i,
         type: "asset/resource",
       },
     ],
